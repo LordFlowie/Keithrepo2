@@ -45,31 +45,30 @@ public class MilkshakeTrigger : MonoBehaviour
     }
     public void FindDrinkCombo()
     {
-        poopDrink.SetActive(true);
-        if (ingredient1.activeSelf && ingredient2.activeSelf)
+         if (!ingredient1.activeSelf && !ingredient2.activeSelf && !ingredient3.activeSelf && !ingredient4.activeSelf && !ingredient5.activeSelf && !ingredient6.activeSelf)
+        {
+            noItems = true;
+            poopDrink.SetActive(false);
+        }
+        if (ingredient1.activeSelf && ingredient2.activeSelf && !ingredient3.activeSelf && !ingredient4.activeSelf && !ingredient5.activeSelf && !ingredient6.activeSelf)
         {
             greenItems = true;
             poopDrink.SetActive(true);
             noItems = false;
         }
-        else if (ingredient3.activeSelf && ingredient4.activeSelf)
+        else if (ingredient3.activeSelf && ingredient4.activeSelf && !ingredient1.activeSelf && !ingredient2.activeSelf && !ingredient5.activeSelf && !ingredient6.activeSelf)
         {
             purpleItems = true;
             poopDrink.SetActive(true);
             noItems = false;
 
         }
-        else if (ingredient5.activeSelf && ingredient6.activeSelf)
+        else if (ingredient5.activeSelf && ingredient6.activeSelf && !ingredient3.activeSelf && !ingredient4.activeSelf && !ingredient1.activeSelf && !ingredient2.activeSelf)
         {
             orangeItems = true;
             poopDrink.SetActive(true);
             noItems = false;
 
-        }
-        else if (!ingredient1.activeSelf && !ingredient2.activeSelf && !ingredient3.activeSelf && !ingredient4.activeSelf && !ingredient5.activeSelf && !ingredient6.activeSelf)
-        {
-            noItems = true;
-            poopDrink.SetActive(false);
         }
         else
         {
