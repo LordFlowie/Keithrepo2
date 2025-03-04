@@ -5,12 +5,18 @@ public class PlayerMovement : MonoBehaviour
     PlayerInput playerInput;
     InputAction moveAction;
 
+    public Animator animator;
+    float vertInput;
+    float horizInput;
+
+
     [SerializeField] float speed = 5;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
+        animator = GetComponent<Animator>();
 
     }
 
@@ -18,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        vertInput = Input.GetAxis("Vertical");
+        horizInput = Input.GetAxis("Horizontal");
     }
 
     void MovePlayer()
@@ -33,6 +41,26 @@ public class PlayerMovement : MonoBehaviour
 
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10); 
+        }
+    }
+    void FixedUpdate()
+    {
+        float movementMagnitude = Mathf.Clamp01(Mathf.Abs(vertInput) + Mathf.Abs(horizInput));
+
+        animator.SetFloat("Movement", movementMagnitude);
+        animator.SetFloat("vAxisInput", vertInput);
+        animator.SetFloat("hAxisInput", horizInput);
+        if (Input.GetKey(KeyCode.Z))
+        {
+            // Set runBool to true if pressed
+            animator.SetBool("runBool", true);
+            Debug.Log("Run");
+        }
+        else
+        {
+            // Set runBool to false if not pressed
+            animator.SetBool("runBool", false);
+            Debug.Log("No Run");
         }
     }
 }

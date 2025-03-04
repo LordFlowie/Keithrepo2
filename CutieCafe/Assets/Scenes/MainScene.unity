@@ -3559,6 +3559,10 @@ PrefabInstance:
       value: modelplayer1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 9db7091d76055814a8095714652f3040, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 9db7091d76055814a8095714652f3040, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b296e643c186f324a96d13576008545b, type: 2}
@@ -9601,7 +9605,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794708727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -20866,6 +20870,11 @@ Transform:
   - {fileID: 1430115244}
   m_Father: {fileID: 300932145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2028447574 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 9db7091d76055814a8095714652f3040, type: 3}
+  m_PrefabInstance: {fileID: 371829800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2028447575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9db7091d76055814a8095714652f3040, type: 3}
@@ -22842,7 +22851,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122030876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -23321,6 +23330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740f39378c161184b9761f323fbba5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2028447574}
   speed: 5
 --- !u!4 &2133353723
 Transform:
