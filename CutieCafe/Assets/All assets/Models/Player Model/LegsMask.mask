@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LegsMask
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Body
+    m_Weight: 1
+  - m_Path: Clothes
+    m_Weight: 1
+  - m_Path: Hair
+    m_Weight: 0
+  - m_Path: Iris
+    m_Weight: 0
+  - m_Path: Rig
+    m_Weight: 1
+  - m_Path: Rig/spine
+    m_Weight: 1
+  - m_Path: Rig/spine/pelvis.L
+    m_Weight: 1
+  - m_Path: Rig/spine/pelvis.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/breast.L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/breast.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Index
+      finger_L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Index
+      finger_L/Index finger_L.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Index
+      finger_L/Index finger_L.002/Index finger_L.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Little
+      finger_L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Little
+      finger_L/Little finger_L.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Little
+      finger_L/Little finger_L.002/Little finger_L.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Middle
+      finger_L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Middle
+      finger_L/Middle finger_L.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Middle
+      finger_L/Middle finger_L.002/Middle finger_L.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Thumb_L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Thumb_L/Thumb_L.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/hand.L/Thumb_L/Thumb_L.002/Thumb_L.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Index
+      finger_R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Index
+      finger_R/Index finger_R.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Index
+      finger_R/Index finger_R.002/Index finger_R.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Little
+      finger_R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Little
+      finger_R/Little finger_R.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Little
+      finger_R/Little finger_R.002/Little finger_R.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Middle
+      finger_R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Middle
+      finger_R/Middle finger_R.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Middle
+      finger_R/Middle finger_R.002/Middle finger_R.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Thumb_R
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Thumb_R/Thumb_R.002
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R/Thumb_R/Thumb_R.002/Thumb_R.001
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/spine.004
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/spine.004/Head
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/spine.004/Head/Eye_L
+    m_Weight: 1
+  - m_Path: Rig/spine/spine.001/spine.002/spine.003/spine.004/Head/Eye_R
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006/Tail.005
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006/Tail.005/Tail.004
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006/Tail.005/Tail.004/Tail.003
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006/Tail.005/Tail.004/Tail.003/Tail.002
+    m_Weight: 1
+  - m_Path: Rig/spine/Tail/Tail.007/Tail.006/Tail.005/Tail.004/Tail.003/Tail.002/Tail.001
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.L
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.L/shin.L
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.L/shin.L/foot.L
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.L/shin.L/foot.L/heel.02.L
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.L/shin.L/foot.L/toe.L
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.R
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.R/shin.R
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.R/shin.R/foot.R
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.R/shin.R/foot.R/heel.02.R
+    m_Weight: 1
+  - m_Path: Rig/spine/thigh.R/shin.R/foot.R/toe.R
+    m_Weight: 1
+  - m_Path: Tail
+    m_Weight: 1
+  - m_Path: Tongue
+    m_Weight: 0
+  - m_Path: Tooth
+    m_Weight: 0
