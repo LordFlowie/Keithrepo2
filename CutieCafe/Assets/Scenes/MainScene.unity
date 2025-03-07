@@ -19861,7 +19861,8 @@ MonoBehaviour:
   orangeItems: 0
   allItems: 0
   noItems: 0
-  anim: {fileID: 2133353727}
+  player: {fileID: 2133353720}
+  targetTime: 2
 --- !u!1 &2009232601
 GameObject:
   m_ObjectHideFlags: 0
@@ -23457,7 +23458,7 @@ Transform:
   m_GameObject: {fileID: 2133353720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.22, z: 0}
+  m_LocalPosition: {x: 0, y: 1.22, z: -2.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23544,12 +23545,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Rig'\n\tTransform 'hand.L'\n\tTransform 'thigh.R'\n\tTransform
-    'foot.R'\n\tTransform 'shin.L'\n\tTransform 'shoulder.L'\n\tTransform 'foot.L'\n\tTransform
-    'Little finger_R.002'\n\tTransform 'forearm.L'\n\tTransform 'hand.R'\n\tand more
-    ...\n\tFrom animation clip 'mixamo.com'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

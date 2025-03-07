@@ -11,15 +11,21 @@ public class MilkshakeTrigger : MonoBehaviour
     [SerializeField] private GameObject ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6;
     public bool greenItems, purpleItems, orangeItems, allItems, noItems;
 
-    public Animator anim;
+    Animator anim;
+    public GameObject player;
+    bool animpickup =false;
+    public float targetTime = 2.0f;
 
     void Start()
     {
+        PlayerMovement playerMovement;
         poopDrink.SetActive(false);
         greenItems = purpleItems = orangeItems = noItems = allItems = false;
         noItems = true;
-        anim = GetComponent<Animator>();
+        //animpickup = false;
+        anim = player.GetComponent<Animator>();
     }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && noItems == true)
@@ -30,11 +36,14 @@ public class MilkshakeTrigger : MonoBehaviour
             DisableAllImages();
             Debug.Log("Enter player MilkBlender");
             anim.SetBool("pickupItem", true);
+            //animpickup = true;
+
         }
         else if (other.CompareTag("Player") && noItems == false)
         {
             poopDrink.SetActive(false);
             anim.SetBool("pickupItem", true);
+            //animpickup = true;
         }
     }
     void OnTriggerExit(Collider other)
@@ -45,9 +54,10 @@ public class MilkshakeTrigger : MonoBehaviour
             isInsideTrigger = false;
             anim.SetBool("pickupItem", false);
             Debug.Log("Exit player");
+            //animpickup = false;
         }
     }
-
+ 
     public void FindDrinkCombo()
     {
          if (!ingredient1.activeSelf && !ingredient2.activeSelf && !ingredient3.activeSelf && !ingredient4.activeSelf && !ingredient5.activeSelf && !ingredient6.activeSelf)
