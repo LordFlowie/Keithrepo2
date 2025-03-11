@@ -5,10 +5,14 @@ public class PlayerMovement : MonoBehaviour
     PlayerInput playerInput;
     InputAction moveAction;
 
-    public Animator animator;
+    Animator animator;
     float vertInput;
     float horizInput;
 
+    float verticalMovement;
+    float horizontalMovement;
+
+    public GameObject textUI;
 
     [SerializeField] float speed = 5;
 
@@ -62,5 +66,59 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("runBool", false);
             Debug.Log("No Run");
         }
+        //DELETING PLAYER OBJ
+        if (textUI.GetComponent<UITextAI_1>().HealthLevel <= 0)
+        {
+            // MonoBehaviour has a gameObject property for the current game object
+            //Destroy(gameObject);
+            
+        }
+        else
+        {
+            // Get the input values for the horizontal and vertical axes
+            verticalMovement = Input.GetAxis("Vertical");
+            horizontalMovement = Input.GetAxis("Horizontal");
+            // Now a compound if statement to determine the direction of the vector
+            Vector3 myDirectionVector = new Vector3();
+            if (verticalMovement > 0)
+            {
+                myDirectionVector = Vector3.forward * verticalMovement;
+            }
+            else if (verticalMovement < 0)
+            {
+                myDirectionVector = Vector3.back * -verticalMovement;
+            }
+            else if (horizontalMovement > 0)
+            {
+                myDirectionVector = Vector3.right * horizontalMovement;
+            }
+            else if (horizontalMovement < 0)
+            {
+                myDirectionVector = Vector3.left * -horizontalMovement;
+            }
+            // Add force to the sphere to move it-
+            GetComponent<Rigidbody>().AddForce(myDirectionVector / 5, ForceMode.Impulse);
+        }
     }
+    void OnCollisionEnter(Collision col)
+    {
+        // the collision will return the gameObject itself- the name property allows different
+        //hitting a cube benefits the economy!
+        if (col.gameObject.name == "Grass")
+        {// change the colour of the object
+            col.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+            //now update the state data
+            textUI.GetComponent<UITextAI_1>().Economy += 1;
+        }
+        else
+        {//hitting anything else is bad for our health!!
+            if (col.gameObject.name == "AIBall")
+            {
+                Destroy(col.gameObject);
+                //reduce health level
+                textUI.GetComponent<UITextAI_1>().Economy -= 1;
+            }
+        }//end of collision condition
+    }
+
 }
