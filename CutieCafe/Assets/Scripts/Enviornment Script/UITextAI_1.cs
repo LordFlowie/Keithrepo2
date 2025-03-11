@@ -58,7 +58,7 @@ public class UITextAI_1 : MonoBehaviour
                            //$"currentLevel: {currentLevel}\n" +
                            //$"spawnPoint: {spawnPoint}\n" +
                            //$"health: {health}\n" +
-                           $"coins: {coins}";
+                           $"Ingredientsß: {coins}";
         }
     }
 }
