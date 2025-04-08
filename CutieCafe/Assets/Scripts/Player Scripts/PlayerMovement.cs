@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         if (Keyboard.current[Key.P].wasPressedThisFrame)
         {
             dataSaveLoad.SaveMethod(transform.position.x, transform.position.y, transform.position.z, transform.rotation);
-            dataSaveLoad.SaveMoney(uiText22.dataStoringObject.money);
+            dataSaveLoad.SaveMoney(uiText22.dataStoringObject.money, uiText22.dataStoringObject.currentcoin, uiText22.dataStoringObject.highscore, uiText22.dataStoringObject.previouscoin);
         }
         if (Keyboard.current[Key.L].wasPressedThisFrame)
         {
@@ -138,6 +138,20 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = position;
         transform.rotation = rotatingRotating;
+
+        if (uiText22.dataStoringObject.currentcoin > uiText22.dataStoringObject.highscore)
+        {
+
+            uiText22.dataStoringObject.highscore = uiText22.dataStoringObject.currentcoin;
+            uiText22.dataStoringObject.previouscoin = uiText22.dataStoringObject.currentcoin;
+            uiText22.dataStoringObject.currentcoin = 0;
+
+        }
+        else
+        {
+            uiText22.dataStoringObject.previouscoin = uiText22.dataStoringObject.currentcoin;
+            uiText22.dataStoringObject.currentcoin = 0;
+        }
     }
 
 }

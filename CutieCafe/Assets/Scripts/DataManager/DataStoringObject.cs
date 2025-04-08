@@ -6,6 +6,7 @@ public class DataStoringObject : ScriptableObject
     public string playerName;
     public string milkshakeType;
     public int money;
+    public int currentcoin, highscore, previouscoin;
     public int level;
     public Vector3 position;
     public Quaternion rotation;

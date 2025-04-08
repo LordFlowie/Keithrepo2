@@ -3725,6 +3725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d75345e1567c664cb6db6dcf5e2dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coins: 0
+  dataStoringObject: {fileID: 11400000, guid: cbc1e1443ead89846a758588fe48592d, type: 2}
+  dataSaveLoad: {fileID: 2133353729}
 --- !u!1 &300932144
 GameObject:
   m_ObjectHideFlags: 0
@@ -26160,6 +26163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataStoringObject: {fileID: 11400000, guid: cbc1e1443ead89846a758588fe48592d, type: 2}
   playerMovement: {fileID: 2133353722}
+  uiText2: {fileID: 0}
 --- !u!1 &2137346123
 GameObject:
   m_ObjectHideFlags: 0

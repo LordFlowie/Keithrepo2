@@ -6,14 +6,15 @@ using TMPro;
 public class UITextAI_2 : MonoBehaviour
 {
     //declare our state variables as simple types for now
-    string playerName;
-    int highScore;
-    int currentLevel;
+    //string playerName;
+    //int currentLevel;
     //reference to a game object
     int health;
     public int coins;
+    //public int currentcoin, highscore, previouscoin;
     //reference to UI Text Object
     TextMeshProUGUI scoreUI;
+
 
 
     public DataStoringObject dataStoringObject; // ← THIS is the fix
@@ -36,9 +37,7 @@ public class UITextAI_2 : MonoBehaviour
 
     void Start()
     {
-        playerName = "KittyCat";
-        highScore = 0;
-        currentLevel = 1;
+
 
         health = 100;
         coins = 0;
@@ -60,9 +59,10 @@ public class UITextAI_2 : MonoBehaviour
             scoreUI.text =
                            //$"highScore: {highScore}\n" +
                            //$"currentLevel: {currentLevel}\n" +
-                           //$"spawnPoint: {spawnPoint}\n" +
-                           //$"health: {health}\n" +
-                           $"coins: {coins}";
+            $"highscore: {dataStoringObject.highscore}";
+            //$"previous score: {dataStoringObject.previouscoin}";
+            //$"coin: {dataStoringObject.money}";
+
         }
        /* if (scoreUI != null && dataStoringObject != null)
         {
@@ -70,9 +70,24 @@ public class UITextAI_2 : MonoBehaviour
         }*/
 
     }
-    public void Load(int money)
+    public void Load(int money, int highscore, int currentscore, int previousscore)
     {
         coins = money;
+        if (dataStoringObject.currentcoin > dataStoringObject.highscore)
+        {
+
+            dataStoringObject.highscore = dataStoringObject.currentcoin;
+            dataStoringObject.previouscoin = dataStoringObject.currentcoin;
+            dataStoringObject.currentcoin = 0;
+
+        }
+        else
+        {
+            dataStoringObject.previouscoin = dataStoringObject.currentcoin;
+            dataStoringObject.currentcoin = 0;
+        }
+
     }
+
 }
 

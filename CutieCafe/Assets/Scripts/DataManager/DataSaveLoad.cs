@@ -10,6 +10,8 @@ public class DataSaveLoad : MonoBehaviour
     private string playerName;
     private string milkshakeType;
     private int money;
+    private int currentcoin, highscore, previouscoin;
+
     private int level;
     private Vector3 position;
     private Quaternion rotation;
@@ -24,6 +26,8 @@ public class DataSaveLoad : MonoBehaviour
         public Vector3 position;
         public Quaternion rotation;
         public int money;
+        public int currentcoin, highscore, previouscoin;
+
     }
 
     private string SaveFileLocation()
@@ -55,11 +59,17 @@ public class DataSaveLoad : MonoBehaviour
         };
         File.WriteAllText(SaveFileLocation(), JsonUtility.ToJson(savingPoo));
     }
-    public void SaveMoney(int moneyMoney)
+    public void SaveMoney(int moneyMoney, int currentCoins, int highScores, int previousCoins)
     {
+        dataStoringObject.previouscoin = previousCoins;
+        dataStoringObject.highscore = highScores;
+        dataStoringObject.currentcoin = currentCoins;
         dataStoringObject.money = moneyMoney;
         SavingPoo savingPoo = new SavingPoo
         {
+            previouscoin = previousCoins,
+            highscore = highScores,
+            currentcoin = currentCoins,
             money = moneyMoney
         };
         File.WriteAllText(SaveFileLocation(), JsonUtility.ToJson(savingPoo));
@@ -68,7 +78,7 @@ public class DataSaveLoad : MonoBehaviour
     {
         SavingPoo loadingPoo = JsonUtility.FromJson<SavingPoo>(File.ReadAllText(SaveFileLocation()));
         playerMovement.Load(loadingPoo.position, loadingPoo.rotation);
-        uiText2.Load(loadingPoo.money);
+        uiText2.Load(loadingPoo.money, loadingPoo.money, loadingPoo.previouscoin, loadingPoo.currentcoin);
     }
 
 }
