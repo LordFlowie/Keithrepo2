@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float speed = 5;
 
+    public static GameObject player; 
+    public DataSaveLoad dataSaveLoad = player.AddComponent<DataSaveLoad>();
+    UITextAI_2 uiText22;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -30,6 +34,15 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
         vertInput = Input.GetAxis("Vertical");
         horizInput = Input.GetAxis("Horizontal");
+        if (Keyboard.current[Key.P].wasPressedThisFrame)
+        {
+            dataSaveLoad.SaveMethod(transform.position.x, transform.position.y, transform.position.z, transform.rotation);
+            dataSaveLoad.SaveMoney(uiText22.dataStoringObject.money);
+        }
+        if (Keyboard.current[Key.L].wasPressedThisFrame)
+        {
+            dataSaveLoad.Load();
+        }
     }
 
     void MovePlayer()
@@ -119,6 +132,12 @@ public class PlayerMovement : MonoBehaviour
                 textUI.GetComponent<UITextAI_1>().Economy -= 1;
             }
         }//end of collision condition
+    }
+
+    public void Load(Vector3 position, Quaternion rotatingRotating)
+    {
+        transform.position = position;
+        transform.rotation = rotatingRotating;
     }
 
 }
