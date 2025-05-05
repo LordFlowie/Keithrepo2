@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56dbfdaf5e85c854cab239b487439e30
+guid: cf449b8efab7924498326a721fc9bd32
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Texture_0
-    second: {fileID: 2100000, guid: 22946bc048a4384409b4baa361c1e324, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Untextured
-    second: {fileID: 2100000, guid: 58c5770000c997546b48c89bfabd89e6, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: baf89224787be964489e73abb5284dc0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -75,7 +70,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
