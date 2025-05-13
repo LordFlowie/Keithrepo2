@@ -20,7 +20,7 @@ public class AIBallScript : MonoBehaviour
         moveDistance = MAX_MOVE_DISTANCE * Time.deltaTime;
         source = transform.position;
 
-        // Check if playerSphere exists
+        
         if (playerSphere != null)
         {
             // Check if the player is within the closeDistance
@@ -30,21 +30,21 @@ public class AIBallScript : MonoBehaviour
             if (distanceToTarget < closeDistance)
             {
                 target = playerSphere.transform.position;
-                outputVelocity = Seek(source, target, moveDistance); // Seek towards the player
+                outputVelocity = Seek(source, target, moveDistance); 
             }
             else
             {
                 // If the player is too far, set a default target (center of the game area)
                 target = Vector3.zero;
-                outputVelocity = Seek(source, target, moveDistance); // Move towards the center or a different target
+                outputVelocity = Seek(source, target, moveDistance); 
             }
 
-            // Apply movement to the Rigidbody
+            
             GetComponent<Rigidbody>().AddForce(outputVelocity, ForceMode.VelocityChange);
         }
         else
         {
-            // If the playerSphere is not assigned, set the target to the center of the game area
+            
             target = Vector3.zero;
             outputVelocity = Seek(source, target, moveDistance);
             GetComponent<Rigidbody>().AddForce(outputVelocity, ForceMode.VelocityChange);
@@ -56,7 +56,6 @@ public class AIBallScript : MonoBehaviour
         directionToTarget = Vector3.Normalize(target - source);
         velocityToTarget = moveDistance * directionToTarget;
 
-        // Return the velocity needed to move towards the target
         return velocityToTarget - GetComponent<Rigidbody>().linearVelocity;
     }
 

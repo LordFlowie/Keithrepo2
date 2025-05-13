@@ -19,7 +19,6 @@ public class SphereRenderScript : MonoBehaviour
 		red = true;
 
 	}
-    // Update is called once per frame
     void Update()
 	{
 		CheckItems();
@@ -100,11 +99,11 @@ public class SphereRenderScript : MonoBehaviour
 	}
 	void CheckColour()
 	{
-		if (red == true) // Use '==' for comparison
+		if (red == true) 
 		{
 			m_Material.color = Color.red;
 		}
-		else if (red == false) // Use '==' for comparison
+		else if (red == false) 
 		{
 			m_Material.color = Color.blue;
 		}

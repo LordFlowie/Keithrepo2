@@ -15,7 +15,7 @@ public class BALLSPEED : MonoBehaviour
     public GameObject[] waypoints;
     private int currentWaypointIndex = 0;
     private bool isIdle = false;
-    public float idleTime = 2f; // Time NPC waits at each waypoint
+    public float idleTime = 2f; 
 
 
 

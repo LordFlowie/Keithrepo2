@@ -7,20 +7,20 @@ public class WayPointAI_1 : MonoBehaviour
     private Vector3 destination;
 
     public bool isVisible, isAudible, isClose;
-    public bool isIdleAtWaypoint = false; // Tracks whether NPC is idle at a waypoint
+    public bool isIdleAtWaypoint = false; 
 
     public Transform target;
-    public AudioSource audioSource;  // Reference to the AudioSource
-    public AudioClip targetAudioClip;  // The specific audio clip you're looking for
+    public AudioSource audioSource;  
+    public AudioClip targetAudioClip;
 
-    public float sightDistance = 10f;  // Maximum sight distance
-    public float closeDistance = 2.5f; // Distance to consider 'close'
-    public float waitTimeAtWaypoint = 2f; // Time to wait at each waypoint (in seconds)
+    public float sightDistance = 10f;  
+    public float closeDistance = 2.5f; 
+    public float waitTimeAtWaypoint = 2f; 
 
     private int nextIndex;
     public GameObject[] waypoints;
 
-    private float waitTimer = 0f; // Timer to track wait time at the waypoint
+    private float waitTimer = 0f; 
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class WayPointAI_1 : MonoBehaviour
 
         if (isVisible && isClose)
         {
-            SeekFunction(); // Chase the target
+            SeekFunction();
         }
         else if (isVisible && !isClose)
         {
@@ -83,22 +83,22 @@ public class WayPointAI_1 : MonoBehaviour
     {
         if (target != null)
         {
-            // Check if the target is within audible range
+            
             if (Vector3.Distance(transform.position, target.position) < closeDistance)
             {
-                // Check if the specific audio clip is playing
+                
                 if (audioSource.isPlaying && audioSource.clip == targetAudioClip)
                 {
-                    isAudible = true;  // The sound is audible and the target is nearby
+                    isAudible = true;  
                 }
                 else
                 {
-                    isAudible = false;  // The sound is not audible, or it's not the target sound
+                    isAudible = false;  
                 }
             }
             else
             {
-                isAudible = false;  // Target is not close enough
+                isAudible = false;  
             }
         }
     }

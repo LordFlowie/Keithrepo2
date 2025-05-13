@@ -14,7 +14,7 @@ public class WaypointManager_1 : MonoBehaviour
             return null;
         }
 
-        // Find current index
+        
         int currentIndex = System.Array.IndexOf(waypoints, current);
         nextIndex = (currentIndex >= 0) ? (currentIndex + 1) % waypoints.Length : 0;
 

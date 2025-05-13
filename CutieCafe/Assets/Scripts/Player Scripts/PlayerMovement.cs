@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         MovePlayer();
@@ -47,11 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer()
     {
-        // Read movement direction from input
         Vector2 direction = moveAction.ReadValue<Vector2>();
 
-        // If there's movement, update position and rotation
-        if (direction.sqrMagnitude > 0.01f) // Use a small threshold to avoid jittering at low input
+        if (direction.sqrMagnitude > 0.01f) 
         {
             Vector3 movement = new Vector3(direction.x, 0, direction.y);
             transform.position += movement * speed * Time.deltaTime;
@@ -69,13 +66,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("hAxisInput", horizInput);
         if (Input.GetKey(KeyCode.Z))
         {
-            // Set runBool to true if pressed
             animator.SetBool("runBool", true);
             Debug.Log("Run");
         }
         else
         {
-            // Set runBool to false if not pressed
             animator.SetBool("runBool", false);
             Debug.Log("No Run");
         }
@@ -88,10 +83,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            // Get the input values for the horizontal and vertical axes
+           
             verticalMovement = Input.GetAxis("Vertical");
             horizontalMovement = Input.GetAxis("Horizontal");
-            // Now a compound if statement to determine the direction of the vector
             Vector3 myDirectionVector = new Vector3();
             if (verticalMovement > 0)
             {
@@ -115,23 +109,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        // the collision will return the gameObject itself- the name property allows different
-        //hitting a cube benefits the economy!
+
         if (col.gameObject.name == "Grass")
-        {// change the colour of the object
+        {
             col.gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-            //now update the state data
             textUI.GetComponent<UITextAI_1>().Economy += 1;
         }
         else
-        {//hitting anything else is bad for our health!!
+        {
             if (col.gameObject.name == "AIBall")
             {
                 Destroy(col.gameObject);
-                //reduce health level
                 textUI.GetComponent<UITextAI_1>().Economy -= 1;
             }
-        }//end of collision condition
+        }
     }
 
     public void Load(Vector3 position, Quaternion rotatingRotating)
